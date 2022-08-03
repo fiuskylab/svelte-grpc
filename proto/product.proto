@@ -1,0 +1,23 @@
+syntax="proto3";
+
+option go_package = "github.com/fiuskylab/svelte-grpc/api/proto";
+
+service Product {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+  rpc List(Empty) returns (CreateResponse) {}
+}
+
+message Empty {}
+
+message CreateRequest {
+  string name = 1;
+}
+
+message CreateResponse {
+  string id = 1;
+  string name = 2;
+}
+
+message ListResponse {
+  repeated CreateResponse products = 1;
+}
