@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/fiuskylab/svelte-grpc/api/server"
 
 func main() {
-	fmt.Println("Hello, Fiuskers!")
+	server.Listen()
 }
