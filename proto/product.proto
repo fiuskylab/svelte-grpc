@@ -4,7 +4,7 @@ option go_package = "github.com/fiuskylab/svelte-grpc/api/proto";
 
 service Product {
   rpc Create(CreateRequest) returns (CreateResponse) {}
-  rpc List(Empty) returns (CreateResponse) {}
+  rpc List(Empty) returns (ListResponse) {}
 }
 
 message Empty {}
